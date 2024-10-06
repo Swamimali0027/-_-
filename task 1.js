@@ -5,11 +5,11 @@ function calculateAge() {
     const errorDiv = document.getElementById('error');
     const resultDiv = document.getElementById('result');
   
-    // Clear previous error and result
+  
     errorDiv.style.display = 'none';
     resultDiv.innerHTML = '';
   
-    // Input validation
+
     if (!day || !month || !year) {
       errorDiv.innerHTML = "Please fill in all fields.";
       errorDiv.style.display = 'block';
@@ -22,16 +22,15 @@ function calculateAge() {
       return;
     }
   
-    // Get current date
+    
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1; // JavaScript months are zero-based
     const currentDay = currentDate.getDate();
-  
-    // Calculate age
+
     let age = currentYear - year;
   
-    // Adjust for birth month and day
+  
     if (currentMonth < month || (currentMonth === month && currentDay < day)) {
       age--;
     }
