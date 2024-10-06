@@ -25,7 +25,7 @@ function calculateAge() {
     
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-    const currentMonth = currentDate.getMonth() + 1; // JavaScript months are zero-based
+    const currentMonth = currentDate.getMonth() + 1; 
     const currentDay = currentDate.getDate();
 
     let age = currentYear - year;
@@ -35,7 +35,7 @@ function calculateAge() {
       age--;
     }
   
-    // Display result
+ 
     resultDiv.innerHTML = `You are ${age} years old.`;
     resultDiv.style.color = '#28a745';
   }
